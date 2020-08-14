@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "StockSentimentAnalysis", "StockSentimentAnalysis.pyproj", "{4A22D47D-8072-4483-BB34-B5A896F3CEE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A22D47D-8072-4483-BB34-B5A896F3CEE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A22D47D-8072-4483-BB34-B5A896F3CEE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E501AAF4-C45E-42E1-B7F7-891508460BB0}
+	EndGlobalSection
+EndGlobal
