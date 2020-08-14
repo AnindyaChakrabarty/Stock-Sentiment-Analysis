@@ -32,6 +32,7 @@ class NaturalLanguageProcessor:
         lemmer = WordNetLemmatizer()
         self.data_["Combined_News"] = self.data_["Combined_News"].map(lambda x : ' '.join([lemmer.lemmatize(w) for w in x.split()]))
     def bagOfWord(self,max_features=1000):
+        print("**************Performing Bag of Words *********************")
         from sklearn.feature_extraction.text import CountVectorizer
         import pandas as pd
         cv_vectorizer = CountVectorizer(min_df=.015, max_df=.8, max_features=max_features, ngram_range=[1, 3])
@@ -46,7 +47,6 @@ class NaturalLanguageProcessor:
     def TFIDF(self):
         from sklearn.feature_extraction.text import TfidfVectorizer
         import pandas as pd
-
         print("**************Performing TFIDF *********************")
         tfidf_vectorizer = TfidfVectorizer(min_df=.02, max_df=.7, ngram_range=[1,3])
         tfidf = tfidf_vectorizer.fit_transform(self.data_["Combined_News"])
