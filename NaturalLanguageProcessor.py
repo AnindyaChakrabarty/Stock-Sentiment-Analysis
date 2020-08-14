@@ -46,6 +46,7 @@ class NaturalLanguageProcessor:
     def TFIDF(self):
         from sklearn.feature_extraction.text import TfidfVectorizer
         import pandas as pd
+
         print("**************Performing TFIDF *********************")
         tfidf_vectorizer = TfidfVectorizer(min_df=.02, max_df=.7, ngram_range=[1,3])
         tfidf = tfidf_vectorizer.fit_transform(self.data_["Combined_News"])
