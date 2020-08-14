@@ -9,7 +9,6 @@ class NaturalLanguageProcessor:
         import numpy as np
         import logging
         self.input_=input
-
         self.util_=Utility()
         self.logger_=self.util_.SetLogger()
         self.dataset_=input.readMongoData()
