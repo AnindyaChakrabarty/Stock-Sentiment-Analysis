@@ -74,4 +74,3 @@ class Report(object):
         self.predictionReport_=self.predictionReport_.append(rSeries,ignore_index=True)
 
 
-db=MongoDB("StockSentimentAnalysis","RawData")

@@ -4,10 +4,18 @@ from Classifier import Classifier, Utility
 
 class NaturalLanguageProcessor:
     def __init__(self,input):
+        import pandas as pd
+        import os
+        import numpy as np
+        import logging
         self.input_=input
         self.util_=Utility()
         self.logger_=self.util_.SetLogger()
         self.dataset_=input.readMongoData()
+        self.Header_=list(self.dataset_.columns)
+        self.Header_.remove('Date')
+        self.dataset_=self.dataset_[self.Header_]
+        print(self.dataset_.head())
         self.dependentVariableName_=input.dependentVariableName_
         self.dataFileName_=input.collectionName_
         self.parentDirectory_ = os.path.dirname(os.getcwd())
@@ -57,6 +65,13 @@ class NaturalLanguageProcessor:
         self.data_=dataTfidf
         print(self.data_.head())
         print(self.data_.tail())
+    def run(self):
+        self.joinNews()
+        self.cleanNews()
+        self.lemmatizeData()
+        self.TFIDF()
+        return self.data_
+
      
 
 
