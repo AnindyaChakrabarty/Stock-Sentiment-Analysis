@@ -8,6 +8,8 @@ class NaturalLanguageProcessor:
         import os
         import numpy as np
         import logging
+        import warnings
+        warnings.filterwarnings('ignore')
         self.input_=input
         self.util_=Utility()
         self.logger_=self.util_.SetLogger()
