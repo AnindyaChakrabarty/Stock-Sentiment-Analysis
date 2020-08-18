@@ -27,9 +27,6 @@
     <Compile Include="Input.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="NaturalLanguageProcessor.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="StockSentimentAnalysis.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
